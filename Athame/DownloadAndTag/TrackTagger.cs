@@ -12,8 +12,6 @@ namespace Athame.DownloadAndTag
 {
     public class TrackTagger
     {
-        private const string CopyrightText = "";
-
         private static void WriteArtworkFile(string directory, AlbumArtworkSaveFormat saveFormat, Track track, ImageCacheEntry albumArtwork)
         {
             string fileName = null;
@@ -69,8 +67,6 @@ namespace Athame.DownloadAndTag
                 file.Tag.Disc = (uint)track.DiscNumber;
                 file.Tag.DiscCount = (uint)(track.Album.GetTotalDiscs() ?? 0);
                 file.Tag.Year = (uint)track.Year;
-                file.Tag.Copyright = CopyrightText;
-                file.Tag.Comment = CopyrightText;
                 if (albumArtwork != null)
                 {
                     file.Tag.Pictures = new IPicture[] { new TagLib.Picture(new ByteVector(albumArtwork.Data)) };
