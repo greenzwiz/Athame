@@ -12,7 +12,7 @@ namespace Athame.DownloadAndTag
 {
     public class TrackTagger
     {
-        private const string CopyrightText = "Respect the artists! Pay for music when you can! Downloaded with Athame";
+        private const string CopyrightText = "";
 
         private static void WriteArtworkFile(string directory, AlbumArtworkSaveFormat saveFormat, Track track, ImageCacheEntry albumArtwork)
         {
